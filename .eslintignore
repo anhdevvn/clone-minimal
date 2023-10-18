@@ -21,3 +21,4 @@ src/service-worker.ts
 src/serviceWorkerRegistration.ts
 src/setupTests.ts
 README.md
+my-readme.md
