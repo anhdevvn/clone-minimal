@@ -9,7 +9,7 @@
 
 
 # Day 1:
-## Init, Setup project
+## Init, Setup project, Config
 - npm create vite@latest
 - Init project
   - Create repo in github (leader)
@@ -24,7 +24,9 @@
     git push -u  origin main | git push -f origin main (warning in using)
   ```
 - - Review and comment (leader)
-- - Create branch dev: git checkout -b dev
+  - Create branch dev: git checkout -b dev
+  - Lock branch main
+  - Require a pull request before mergin to branch dev
 - Create issue "config eslint, prettierrc, editorconfig"
   - install modules: npm install
   - npm i prettier
@@ -34,8 +36,143 @@
   - add editorconfig to VSC
     - Config editorconfig: .editorconfig
   - npm run dev (start project)
-  - edit gitignore  
-  - Create branch : git checkout -b config/formatter
-  - git branch
-  - git add .
+  - CTRL + C to end the server
+  - push to git/ repo gihub
+    - edit gitignore  
+    - Create branch : git checkout -b config/formatter
+    - git branch (config/formatter)
+    - git add .
+    - git status git commit -m "#2 feat(eslint, prettier, editorconfig,...) - config code format, ide, gitignore"
+    - git push origin config/formatter
+    - Compare a pull request (leader) -> Merge to dev branch
+    - Compare a pull request (leader) -> Merge to main branch (warning)
+  ---
+  - Edit the tscofig, viteconfig to like minimal (by guide (history commit))
+  - Config file: tsconfig.json, vite.config.ts 
+    - npm i @types/node (to add path)
+  - push to git/ repo gihub
 
+## Config structure
+- Structure react file (Youtube WEB Dev Simplified)
+- Folder structure
+  - src
+    - assets : chua cac files tinh
+    - api
+      - auth
+    - components
+    - hooks
+    - layouts
+    - locales (times and languages)
+      - use-locales.ts
+    - pages
+    - sections (elements of pages)
+    - routes : duong dan
+      - sections
+        - index.tsx
+    - themes
+      - index.tsx
+      - typography.tsx
+      - palette.ts (color schema)
+      - shadow.ts
+    - types
+    - utils : ham phu tro, ho tro
+    - mocks: dua du lieu data ao vao de hien thi len trang web (api ao)
+- Create folders follow the stucture
+- Structuer themes (SETUP base Of CSS)
+  - download MUI: 
+    - npm i @mui/types
+    - npm install @mui/material @emotion/react @emotion/styled
+    - npm install @mui/material @mui/styled-engine-sc styled-components
+    - npm install @mui/base 
+    - Copy config @mui/* to package.json
+    - npm i | reset setup MUI like minimal project
+  - dowload emotion, babel, .... (see in the package.json)
+    - npm i @emotion/cache @emotion/react @emotion/styled
+    - npm i @babel/core
+    - npm i @babel/plugin-syntax-flow @babel/plugin-transform-react-jsx
+    - npm i @vitejs/plugin-react
+    - npm i @types/lodash.merge
+  - SETUP typography.tsx
+    - Convert px to em : remToPx, pxToRem
+    - const `primaryFont`
+    - Watch font config in Figma design H1: font-family, font-size, font-weight, line-height, 
+      - font-weigh: bold(700), regular(400), medium(500)
+    - const `typography`
+    - function `responsiveFontSizes`
+    - Declare typography - font-weight `TypographyVariants`
+
+  - SET pallete.ts (color schema) : class children inherit class father by rest and spread
+    - Watch color schema in figma design
+    - type ColorSchema : bang mau
+    - const GREY, PRIMARY, ... , ERROR
+    - Add more color to text: ligter, darker ...
+    - const COMMON
+      - Add action: hover, focus ...
+      - function palette : dark - light mode
+  
+  - SET shadow.ts
+    - 
+  - themes/index.tst
+    - ThemeProvider
+  - Fix '@mui/material/styles' : invalid module name in augmentation (optional)
+
+- Demo a page 
+- push to git/ repo gihub in branch config/
+
+
+## Demo a page
+- src/ Route
+  - npm i react-router-dom@6.15.0
+  - index.tsx
+    - function SimpleLayout
+  - main.tsx
+    - const mainRoutes
+    - Suspense: show a loading content before the page loaded
+  - src/layout/main/layout.tsx
+    - function MainLayout (cau truc)
+  - Add BrowerRouter to Main.tsx to navigate router
+  - Edit App.tsx
+  - Flow main.tsx - App.tsx - sections/index.tsx - Mainlayout
+
+- npm i react-helmet-async (allow manage head tags : title)
+  - add <HelmetProvider> to main.tsx
+  - add <Helmet> to pages
+
+- Home page
+  - create pages/home.tsx
+    - function HomePage()
+  - create Homeview ()
+    - Export from homeview.tsx to index.tsx
+  - Analysis layout in figma design
+    - Header
+    - Footer
+  - npm i framer-motion | roll effection in page
+
+
+## Review design
+- Overall to Details
+- Overview the website design (Minimal design system | page 1): app, layout
+- Review SETUPS: GuIDLINE, COLOR, TYPOGRAPHY, SHADOW, COMPONENTS
+  - Base on setup to config colors (primary, secondary, ....) in projects
+- Review LAYOUTS: 
+
+## Error that may occur
+- version MUI
+- '@mui/material/styles' : invalid module name in augmentation
+  - check error: 
+    - npm run dev
+    - npm build
+  - possible resolution: 
+    - npm i (the error resolved)
+    - delete nodemulde -> npm i
+    - config file: tsconfig.json, vite.config.ts 
+      - npm i @types/node (to add path)
+  - reason: version does not match "typescript": "^5.0.2" -> "typescript": "^5.2.2",
+
+## Notes
+- .ts : define a funtion, config, ... , .tsx (embeded JSX) return a jsx coponents (UI element)
+- every folder need a index.tsx file to export other files to apply detructuring
+
+
+current time: 
+1.12.44
