@@ -174,5 +174,48 @@
 - every folder need a index.tsx file to export other files to apply detructuring
 
 
-current time: 
-1.12.44
+-----------------------
+# Day 2
+- Create a demo page (about-us)
+  - Create a route
+    - routes/sections/main.tsx
+  - Create a button in home page to navigate
+    - sections/home/home-view.tsx: <Link>
+  - Create a page
+    - pages/about-us.tsx
+  - Create a view
+    - section/about/about-view.tsx
+
+
+
+
+-------------
+# Fix bug
+- Copy package.json, package-lock.json
+- Reset node modules
+```
+npm install -g rimraf
+rimraf node_modules 
+```
+- Khi tạm thời cần tạm dừng công việc hiện tại và chuyển sang một branch khác
+```
+# Tạm thời lưu lại các phần công việc còn đang làm dở
+$ git stash -u
+
+# Chuyển sang một branch khác và làm việc
+$ git checkout -b other-branch
+~làm việc, làm việc, làm việc~
+$ git add <các file cần thiết>
+$ git commit -m "commit message"
+
+# Trở về branch cũ
+$ git checkout origin-branch
+
+# Lấy lại các nội dung công việc đang làm dở trước đó
+$ git stash pop
+
+Source: https://viblo.asia/p/19-bi-kip-ban-co-the-dung-khi-pham-sai-lam-voi-git-dWrvwdmPRw38
+```
+
+
+---------------
