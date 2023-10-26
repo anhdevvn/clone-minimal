@@ -1,4 +1,5 @@
 import Box from "@mui/material/Box";
+import Header from "./header";
 
 type Props = {
   children: React.ReactNode;
@@ -6,6 +7,11 @@ type Props = {
 export default function MainLayout({ children }: Props) {
   return(
     <Box sx={{ display: 'flex', flexDirection: 'column', height: 1 }}>
+      {/* Header */}
+      <Header />
+
+      {/* Content start */}
+      
       <Box
         component="main"
         sx={{
@@ -15,6 +21,11 @@ export default function MainLayout({ children }: Props) {
       >
         {children}
       </Box>
+
+      {/* Content End */}
+
+      {/* Footer */}
+
     </Box>
   )
 }

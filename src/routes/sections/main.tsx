@@ -2,7 +2,10 @@ import { Suspense, lazy } from "react";
 import { Outlet } from "react-router";
 import MainLayout from "src/layouts/main/layout";
 import AboutPage from "src/pages/about-us";
-//export const HomePage = lazy(() => import('src/pages/home'));
+import DotaskPage from "src/pages/do-task";
+
+
+export const HomePage = lazy(() => import('src/pages/home'));
 export const mainRoutes = [
   {
     element:(
@@ -16,6 +19,10 @@ export const mainRoutes = [
       {
         path: 'about-us',
         element: <AboutPage />
+      },
+      {
+        path: 'do-tasks',
+        element: <DotaskPage/>
       }
     ],
   }

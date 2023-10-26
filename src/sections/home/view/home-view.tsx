@@ -13,6 +13,11 @@ export default function HomeView() {
           Go to about us
         </Link>
       </Box>    
+      <Box>
+        <Link  href="./do-tasks" target="_blank">
+          Go to tasks
+        </Link>
+      </Box>   
     </>
   )
 }
