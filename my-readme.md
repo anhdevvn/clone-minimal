@@ -176,6 +176,9 @@
 
 -----------------------
 # Day 2
+- Clone a repo | pull from dev branch
+- change to dev branch
+
 - Create a demo page (about-us)
   - Create a route
     - routes/sections/main.tsx
@@ -186,8 +189,48 @@
   - Create a view
     - section/about/about-view.tsx
 
+- Push to github in feature branch
+
+- Pull a request to github
+  - Close pull request (project do not approve)
+  - In case that the pull request can be approved
+    - Resolve conflicts in the pull request
+    - Check conflict and edit/delete
+    - Commit merge
+    - Review and merge to dev branch (Leader)
+    - Delete branch if need (Leader)
+
+### Create home page
+- Review layout in design | src/layout/main/layout.tsx
+  - config-layout.tsx
+- Add <ThemeProvider> to App.tsx
+  - theme/index.tsx
+  - shadow.tsx
+  - Create ThemeProvider - import to App
+  - Dua vao theme nay update sau nay
+
+- Create the logo
+  - Export svg file from figma
+  - src/components/logo
+    - logo.tsx, index.ts
+
+- Custome Router Link
+  - routes/component/router-link.tsx
 
 
+- Create nav Deck
+  - layout/desktop/nav-desktop.tsx
+  - types.ts
+  - layout/main/config-navigation.tsx
+
+- Install Icontify
+  - npm i @iconify/react
+  - Custom icontify 
+    - components/icontify
+
+- Create header
+  - src/layout/main/header.tsx
+  - 
 
 -------------
 # Fix bug
@@ -217,5 +260,55 @@ $ git stash pop
 Source: https://viblo.asia/p/19-bi-kip-ban-co-the-dung-khi-pham-sai-lam-voi-git-dWrvwdmPRw38
 ```
 
+- Change branch when the file is edited
+  - git log --oneline
+  - git reset -soft head
+  - git restore . (unstage)
+  - git checkout branch_name
+
+
 
 ---------------
+
+
+# Day 4: Build Nav Bar
+- Config theme
+  - css.ts: 
+    - Theme: from material/styles
+    - MenuItemClass, checkBoxClass, .... : from material
+    - code bgBlur: độ mờ
+
+  - custom-shadow.ts
+    - customsize palete from palete.ts
+    - create light mode and dark mode
+    - createShadow
+    - export customShadow
+    - declare module: extend Theme of MUI/material
+  - index.tsx
+    - import customShadow
+    - add CSSBaseLine lib
+- Header.tsx
+  - style: sx
+  - Container
+  - Badge
+    - style
+    - badge content
+    - Label
+      - create src/component/label
+  - Loggin button: layout/_commen/login-button
+  - Setting button: layout/_commen/setting_button
+  - Build Navbar indesktop
+    - type.ts
+    - styles.ts
+    - nav-item.tsx
+    - nav-list.tsx
+    - nav-desktop.tsx
+
+- src/config-global.ts
+  - cau hinh chung cho du an
+
+- src/components/animate
+- 
+
+## Note:
+- https://css-tricks.com/using-react-portals-to-render-children-outside-the-dom-hierarchy/
