@@ -308,7 +308,7 @@ Source: https://viblo.asia/p/19-bi-kip-ban-co-the-dung-khi-pham-sai-lam-voi-git-
   - cau hinh chung cho du an
 
 - src/components/animate
-- 
+- edit error in lazy moion
 
 ## Note:
 - https://css-tricks.com/using-react-portals-to-render-children-outside-the-dom-hierarchy/
