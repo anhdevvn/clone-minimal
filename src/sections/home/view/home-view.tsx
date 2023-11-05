@@ -21,7 +21,16 @@ export default function HomeView() {
         <Link  href="./do-tasks" target="_blank">
           Go to tasks
         </Link>
-      </Box>   
+      </Box>  
+      <Box
+        sx = {{
+          overflow: 'hidden',
+          position: 'relative',
+          height: '1000px'
+        }}
+      >
+        <p>Home</p>
+      </Box> 
     </>
   )
 }

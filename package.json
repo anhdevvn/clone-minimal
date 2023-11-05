@@ -26,6 +26,7 @@
     "@types/lodash.merge": "^4.6.7",
     "@types/node": "^20.8.6",
     "@vitejs/plugin-react": "^4.1.0",
+    "date-fns": "^2.30.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "framer-motion": "^10.16.4",
     "prettier": "^3.0.3",

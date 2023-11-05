@@ -10,6 +10,7 @@ export const paths = {
   about: '/about-us',
   contact: '/contact-us',
   doTasks: '/do-tasks',
+  faqs: '/faqs',
 
 
   //externals
