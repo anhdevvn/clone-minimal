@@ -310,5 +310,9 @@ Source: https://viblo.asia/p/19-bi-kip-ban-co-the-dung-khi-pham-sai-lam-voi-git-
 - src/components/animate
 - edit error in lazy moion
 
+# 30/10/2023
+- build footer
+
+
 ## Note:
 - https://css-tricks.com/using-react-portals-to-render-children-outside-the-dom-hierarchy/
